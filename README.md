@@ -45,9 +45,10 @@
 php8.3.6<br>
 Laravel8<br>
 docker<br>
-nginx<br>
-MySQL<br>
+nginx1.21.1<br>
+MySQLl:8.0.26<br>
 GitHub<br>
+phpmyadmin<br>
 言語やフレームワークバージョンなど<br>
 
 ## ER図
