@@ -52,12 +52,13 @@ phpmyadmin<br>
 言語やフレームワークバージョンなど<br>
 
 ## ER図
-![image](https://github.com/boreaster21/fortify/assets/155618258/5f4f2e26-6102-4900-add8-4098775f1390)
 
 ## テーブル設計
 
 ## 環境構築
 実行用コマンド
+コマンドライン上
+$ docker-compose exec php bash
 
 ## 他リポジトリ
 特になし
