@@ -1,4 +1,4 @@
-# Atte
+# Rese
 <img width="950" alt="image" src="https://github.com/boreaster21/Rese/assets/155618258/92c62f07-2e48-4aef-9bb6-8f178f8a933a">
 
 どんなアプリか：ある企業のグループ会社の飲食店予約サービス
@@ -45,20 +45,15 @@
 php8.3.6<br>
 Laravel8<br>
 docker<br>
-nginx1.21.1<br>
-MySQLl:8.0.26<br>
+nginx<br>
+MySQL<br>
 GitHub<br>
-phpmyadmin<br>
-言語やフレームワークバージョンなど<br>
 
 ## ER図
-
-## テーブル設計
+![ReseTables drawio](https://github.com/boreaster21/ReseTest/assets/155618258/35e2eba2-a2b1-4de8-84b1-32c712dd93af)
 
 ## 環境構築
 実行用コマンド
-コマンドライン上
-$ docker-compose exec php bash
 
 ## 他リポジトリ
 特になし
