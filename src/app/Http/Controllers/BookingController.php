@@ -5,12 +5,9 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use App\Models\Fav;
-use App\Models\User;
 use App\Models\Shop;
 use App\Models\ShopReview;
 use App\Models\Booking;
-use App\Models\Keyword;
-use Carbon\Carbon;
 use App\Http\Requests\BookingRequest;
 
 class BookingController extends Controller
@@ -32,7 +29,6 @@ class BookingController extends Controller
 
     public function unbook($id)
     {
-        $user = Auth::user();
         $booking = Booking::where('id', $id)->where('user_id', Auth::id())->first();
         $booking->delete();
 

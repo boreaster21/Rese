@@ -7,7 +7,6 @@ use App\Http\Controllers\FavController;
 use App\Http\Controllers\BookingController;
 use App\Http\Controllers\ReviewController;
 use App\Http\Controllers\StripeController;
-use App\Http\Controllers\QrCodeController;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\AdminDashboardController;
 use App\Http\Controllers\MultiAuthController;
@@ -51,7 +50,6 @@ Route::get('/mypage/payment/index', [StripeController::class, 'payment_index'])-
 Route::post('/mypage/payment', [StripeController::class, 'payment'])->name('payment')->middleware('verified');
 Route::get('/mypage/payment/complete', [StripeController::class, 'complete'])->name('complete')->middleware('verified');
 
-Route::get('/mypage/qrcode', )->name('qrcode')->middleware('verified');
 
 
 Route::group(['middleware' => ['auth', 'can:admin']], function () {

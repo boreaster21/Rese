@@ -19,8 +19,6 @@ class StripeController extends Controller
 
         try {
             Stripe::setApiKey(env('STRIPE_SECRET'));
-
-            //ここで顧客情報を登録②
             $customer = Customer::create(
                 array(
                     'email' => $request->stripeEmail,
@@ -30,7 +28,6 @@ class StripeController extends Controller
 
             dump($customer);
             dump($customer->id);
-            //お支払い処理③
             $charge = Charge::create(
                 array(
                     'customer' => $customer->id,
@@ -39,7 +36,6 @@ class StripeController extends Controller
                 )
             );
 
-            //情報が色々みられます。
             dump($charge);
             dump($charge->source->id);
             dump($charge->source->brand);

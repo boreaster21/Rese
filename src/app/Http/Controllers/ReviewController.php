@@ -37,41 +37,6 @@ class ReviewController extends Controller
         $bookings = Booking::where('user_id', $user->id)->get();
 
         return view('mypage', compact('shops', 'bookings', 'booking_No', 'No', 'favs', 'reviews'));
-
-        // $result = false;
-
-        // バリデーション
-        // $request->validate([
-        //     'shop_id' => [
-        //         'required',
-        //         'exists:shop,id',
-        //         function ($attribute, $value, $fail) use ($request) {
-
-        //             // ログインしてるかチェック
-        //             if (!auth()->check()) {
-
-        //                 $fail('レビューするにはログインしてください。');
-        //                 return;
-        //             }
-
-        //             // すでにレビュー投稿してるかチェック
-        //             $exists = \App\ProductReview::where('user_id', $request->user()->id)
-        //                 ->where('product_id', $request->product_id)
-        //                 ->exists();
-
-        //             if ($exists) {
-
-        //                 $fail('すでにレビューは投稿済みです。');
-        //                 return;
-        //             }
-        //         }
-        //     ],
-        //     'stars' => 'required|integer|min:1|max:5',
-        //     'comment' => 'required'
-        // ]);
-
-        // $result = $review->save();
-        // return ['result' => $result];
     }
     public function edit(REQUEST $Request)
     {
