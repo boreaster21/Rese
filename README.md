@@ -54,6 +54,15 @@ GitHub<br>
 
 ## 環境構築
 実行用コマンド
+・下記コマンドでdatabase/csv/shops.csv ダミーの店舗情報を読み込む
+php artisan db:seed --class=ShopSeeder
+
+・3権限はUsersのroleカラムで分けています。
+0 = 利用者
+100 = 店舗代表者
+999 = 管理者
+管理者権限（999）はmysqlから直接付与してください。
+そのほか２権限は管理者権限のあるアカウントでログイン後 http://localhost/admin から各ユーザーの権限管理ができます。
 
 ## 他リポジトリ
 特になし
